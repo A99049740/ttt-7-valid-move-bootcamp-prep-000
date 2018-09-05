@@ -4,11 +4,8 @@
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
 
 def valid_move? (board, index)
-  if index >= 0 && index <= 9
+  if index >= 0 && index <= 9 && !position_taken?(board, index)
     return true
-  end
-  else if position_taken?(board, index)
-    return false
   end
   return false
 end
